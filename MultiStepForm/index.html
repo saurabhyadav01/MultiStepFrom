@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MultiStepForm</title>
+</head>
+<body>
+    <div class="container">
+        <form id="Form1">
+            <h3>CREATE ACCOUNT</h3>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Re-Enter" required>
+            <div class="btn-box">
+                <button type="button" id="Next1">Next</button>
+
+            </div>
+        </form>
+
+
+        <form id="form2">
+            <h3>SOCIAL LINK</h3>
+            <input type="text" placeholder="Mediem">
+            <input type="text" placeholder="Git-Hub" >
+            <input type="text" placeholder="linked-In">
+            <div class="btn-box">
+                <button type="button" id="Back1">Back</button>
+                <button type="button" id="Next2">Next</button>
+                
+
+            </div>
+        </form>
+        
+
+        
+        <form id="form3">
+            <h3>PERSONAL INFO</h3>
+            <input type="text" placeholder="First Name" required>
+            <input type="password" placeholder="Last Name" required>
+            <input type="text" placeholder="Moblile No." required>
+            <div class="btn-box">
+                <button type="button" id="Back2">Back</button>
+                <button type="button" id="Next3">Next</button>
+
+            </div>
+
+        </form>
+        <form id="form4">
+            <h3>ADDRESS</h3>
+            <input type="text" placeholder="City" required>
+            <input type="text" placeholder="District" required>
+            <input type="text" placeholder="State" required>
+            <div class="btn-box">
+                <button type="button" id="Back3">Back</button>
+                <button type="submit" id="submit1">submit</button>
+                
+
+            </div>
+        </form>
+
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>Step1</small></div>
+            <div class="step-col"><small>Step2</small></div>
+            <div class="step-col"><small>Step3</small></div>
+            <div class="step-col"><small>Step4</small></div>
+           
+            </div>
+        </div>
+    </div>
+    
+ <script>
+     var Form1 = document.getElementById("Form1");
+     var form2 = document.getElementById("form2");  
+     var form3 = document.getElementById("form3");    
+     var form4= document.getElementById("form4");  
+     var progress = document.getElementById("progress"); 
+    
+    var Next1 =document.getElementById("Next1");  
+    var Next2 =document.getElementById("Next2");
+    var Next2 =document.getElementById("Next2");
+    var Back1 =document.getElementById("Back1");
+    
+    var Back2 =document.getElementById("Back2");
+    var Back3 =document.getElementById("Back3");
+
+    
+   
+    Back1.onclick =function()
+     {
+        Form1.style.left ="40px";
+        form2.style.left = "450px";
+        progress.style.width ="100px";
+    }
+    Back2.onclick =function()
+     {
+        Form1.style.left ="40px";
+        form3.style.left = "450px";
+        progress.style.width ="90px";
+    }
+    
+    
+    Back3.onclick =function()
+     {
+    
+        form4.style.left = "450px";
+        form3.style.left = "40px";
+        progress.style.width ="260px";
+    
+    } 
+    Next1.onclick =function()
+    {
+        Form1.style.left ="450px";
+        form2.style.left = "40px";
+        progress.style.width ="180px";
+    }
+    Next2.onclick =function()
+    {
+        
+        
+        form2.style.left = "450px";
+        form3.style.left = "40px";
+        progress.style.width ="270px";
+    }
+    Next3.onclick =function()
+    { 
+        form3.style.left = "450px";
+        form4.style.left = "40px";
+        progress.style.width ="400px";
+    }
+    
+
+   
+     submit1.onclick =function()
+    {
+    alert("Register Successfuly");
+        
+    
+}     
+
+    
+    
+    
+  
+
+
+ </script>
+</body>
+</html>
